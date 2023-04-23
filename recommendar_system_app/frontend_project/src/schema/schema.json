@@ -1,0 +1,125 @@
+{
+  "schema": [
+    {
+      "name": "Demographic",
+      "fields": [
+        {
+          "label": "Age recode with <1 year olds",
+          "name": "ageRecode",
+          "type": "select",
+          "range": ["15-19 years", "20-24 years", "25-29 years", "30-34 years", "35-39 years", "40-44 years", "45-49 years", "50-54 years", "55-59 years", "60-64 years", "65-69 years", "70-74 years", "75-79 years", "80-84 years", "85+ years"]
+        },
+        {
+          "label": "Marital status at diagnosis",
+          "name": "maritalStatus",
+          "type": "select",
+          "range": ["Single (never married)", "Married (including common law)", "Divorced", "Widowed", "Separated", "Unmarried or Domestic Partner"]
+        }
+      ]
+    },
+    {
+      "name": "ExtentOfDisease",
+      "fields": [
+        {
+          "label": "CS tumor size (2004-2015)",
+          "name": "tumorSize",
+          "type": "input",
+          "range": [1, 50]
+        },
+        {
+          "label": "Regional nodes positive (1988+)",
+          "name": "PRN",
+          "type": "input",
+          "range": [1, 4]
+        },
+        {
+          "label": "Regional nodes examined (1988+)",
+          "name": "ERN",
+          "type": "input",
+          "range": [1, 59]
+        },
+        {
+          "label": "Breast Subtype (2010+)",
+          "name": "breastSubtype",
+          "type": "select",
+          "range": ["HR+/HER2- (Luminal A)", "HR+/HER2+ (Luminal B)"]
+        },
+        {
+          "label": "ER Status Recode Breast Cancer (1990+)",
+          "name": "ERStatus",
+          "type": "select",
+          "range": ["Positive", "Negative"]
+        },
+        {
+          "label": "PR Status Recode Breast Cancer (1990+)",
+          "name": "PRStatus",
+          "type": "select",
+          "range": ["Positive", "Negative"]
+        }
+      ]
+    },
+    {
+      "name": "Morphology",
+      "fields": [
+        {
+          "label": "Laterality",
+          "name": "laterality",
+          "type": "select",
+          "range": ["Left - origin of primary", "Right - origin of primary"]
+        },
+        {
+          "label": "Grade (thru 2017)",
+          "name": "grade",
+          "type": "select",
+          "range": ["Well differentiated; Grade I", "Moderately differentiated; Grade II", "Poorly differentiated; Grade III", "Undifferentiated; anaplastic; Grade IV"]
+        },
+        {
+          "label": "ICD-O-3 Hist/behav",
+          "name": "Hist",
+          "type": "select",
+          "range": ["8520/3: Lobular carcinoma, NOS", "8500/3: Infiltrating duct carcinoma, NOS"]
+        }
+      ]
+    },
+    {
+      "name": "Stage",
+      "fields": [
+        {
+          "label": "Derived AJCC T, 6th ed (2004-2015)",
+          "name": "T",
+          "type": "select",
+          "range": ["T2", "T1c", "T1b", "T1a", "T1mic"]
+        },
+        {
+          "label": "Derived AJCC N, 6th ed (2004-2015)",
+          "name": "N",
+          "type": "select",
+          "range": ["N1a", "N1mi", "N1", "N1NOS", "N1c", "N1b"]
+        },
+        {
+          "label": "Derived AJCC M, 6th ed (2004-2015)",
+          "name": "M",
+          "type": "select",
+          "range": ["M0"]
+        }
+      ]
+    },
+    {
+      "name": "Therapy",
+      "fields": [
+        {
+          "label": "RX Summ--Surg Prim Site (1998+)",
+          "name": "primSurg",
+          "type": "select",
+          "range": ["22 Lumpectomy or excisional biopsy", "23 Reexcision of the biopsy site for gross or microscopic residual disease", "51 Modified radical mastectomy without removal of uninvolved contralateral breast"]
+        },
+        {
+          "label": "Chemotherapy recode (yes, no/unk)",
+          "name": "chemotherapy",
+          "type": "select",
+          "range": ["No/Unknown", "Yes"]
+        }
+      ]
+    }
+  ]
+}
